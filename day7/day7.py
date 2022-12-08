@@ -107,14 +107,12 @@ with open("input.txt", "r") as f:
                 cwd.children.append(Node(t="dir", n=filename, p=cwd))
 
 t.calc_dir_sizes(t.root)
-#print(t.root.children[2].size)
 t.less_than_100000(t.root)
 t.get_dirs(t.root)
 
 required = 30000000 - (70000000 - t.root.size)
 smallest = 70000000
 for el in dirs:
-    print
     if el.size < smallest and el.size >= required:
         smallest = el.size
 
